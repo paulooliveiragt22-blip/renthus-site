@@ -21,13 +21,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           "disabled:pointer-events-none disabled:opacity-50",
           {
             default:
-              "border border-gray-200 bg-white text-renthus-purple shadow-sm hover:border-renthus-orange/35 hover:bg-gray-50",
+              "border border-gray-200 bg-white text-renthus-purple shadow-sm hover:scale-[1.02] hover:border-renthus-orange/35 hover:bg-gray-50 hover:shadow-md",
             outline:
-              "border border-gray-300 bg-transparent text-gray-800 hover:border-renthus-orange hover:text-renthus-purple",
+              "border border-gray-300 bg-transparent text-gray-800 hover:scale-[1.02] hover:border-renthus-orange hover:text-renthus-purple hover:shadow-sm",
             ghost:
-              "text-gray-600 hover:bg-gray-100 hover:text-renthus-purple",
+              "text-gray-600 hover:bg-gray-100 hover:text-renthus-purple hover:scale-[1.02]",
             cta:
-              "bg-renthus-orange text-white shadow-sm hover:bg-renthus-orange-hover hover:shadow active:scale-[0.98]",
+              "bg-renthus-orange text-white shadow-sm hover:bg-renthus-orange-hover hover:scale-[1.02] hover:shadow-md active:scale-[0.98]",
           }[variant],
           {
             sm: "h-9 px-3 text-sm",
