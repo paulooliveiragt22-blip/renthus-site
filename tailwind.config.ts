@@ -10,33 +10,34 @@ const config: Config = {
     extend: {
       colors: {
         border: "hsl(var(--border))",
-        background: "#050208",
-        foreground: "#f4f4f5",
+        background: "#F8F9FA",
+        foreground: "#1f2937",
         renthus: {
           purple: {
-            DEFAULT: "#4B0082",
-            dark: "#1A0B2E",
-            light: "#7B2CBF",
+            DEFAULT: "#4B1D7A",
+            light: "#5E2A94",
+            dark: "#3a165e",
           },
           orange: {
-            DEFAULT: "#FF6B00",
-            glow: "rgba(255, 107, 0, 0.15)",
+            DEFAULT: "#F77F00",
+            hover: "#D96E00",
+            glow: "rgba(247, 127, 0, 0.14)",
           },
+          surface: "#F8F9FA",
+          elevated: "#FFFFFF",
         },
       },
       backgroundImage: {
-        "gradient-renthus": "linear-gradient(135deg, #4B0082 0%, #FF6B00 100%)",
-        "gradient-cta": "linear-gradient(135deg, #FF8C00 0%, #FF4500 100%)",
+        "gradient-renthus": "linear-gradient(135deg, #4B1D7A 0%, #F77F00 100%)",
+        "gradient-cta": "linear-gradient(180deg, #F77F00 0%, #D96E00 100%)",
         "radial-glow": "radial-gradient(circle at center, var(--tw-gradient-stops))",
       },
       boxShadow: {
-        "orange-glow": "0 0 24px -4px rgba(255, 107, 0, 0.5)",
-        "orange-glow-lg": "0 0 40px -6px rgba(255, 107, 0, 0.45)",
-        "orange-glow-soft":
-          "0 2px 16px -2px rgba(255, 140, 0, 0.28), 0 0 48px -12px rgba(255, 107, 0, 0.22)",
-        "orange-glow-soft-lg":
-          "0 4px 28px -4px rgba(255, 140, 0, 0.38), 0 0 64px -10px rgba(255, 107, 0, 0.3)",
-        card: "0 0 0 1px rgba(255, 255, 255, 0.06), 0 24px 48px -24px rgba(0, 0, 0, 0.6)",
+        "renthus-card":
+          "0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06)",
+        "renthus-card-hover":
+          "0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.06)",
+        card: "0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06)",
       },
     },
   },

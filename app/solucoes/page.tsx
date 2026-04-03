@@ -43,21 +43,20 @@ export default function SolucoesIndexPage() {
               <Link
                 href={item.href}
                 className={cn(
-                  "group flex h-full flex-col rounded-2xl border border-white/10 p-6 shadow-card backdrop-blur-md transition-all duration-300",
-                  "bg-gradient-to-br from-renthus-purple-light/[0.1] via-renthus-purple-dark/[0.5] to-[#06030a]",
-                  "hover:border-renthus-orange/40 hover:shadow-[0_0_36px_-10px_rgba(255,107,0,0.3)]"
+                  "group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300",
+                  "hover:border-gray-300 hover:shadow-renthus-card-hover"
                 )}
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] icon-glow-orange">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-gray-100 bg-renthus-surface icon-glow-orange">
                   <Icon className="h-6 w-6 text-renthus-orange" />
                 </div>
-                <h2 className="text-lg font-semibold text-zinc-50">
+                <h2 className="text-lg font-semibold text-renthus-purple">
                   {item.label}
                 </h2>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-gray-600">
                   {blurbs[item.href]}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-renthus-orange">
+                <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-renthus-orange">
                   Ver detalhes
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
@@ -67,10 +66,10 @@ export default function SolucoesIndexPage() {
         })}
       </ul>
 
-      <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-zinc-500">
+      <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-gray-500">
         Projetos web, landing pages e e-commerce sob medida entram pelo mesmo
         canal —{" "}
-        <Link href="/contato" className="text-renthus-orange hover:underline">
+        <Link href="/contato" className="font-medium text-renthus-orange hover:underline">
           fale conosco em Contato
         </Link>
         .

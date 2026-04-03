@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 
 export function SolutionCTA() {
   return (
-    <div className="mt-20 rounded-2xl border border-white/10 bg-renthus-purple-dark/35 px-6 py-10 text-center backdrop-blur-md sm:px-10">
-      <p className="text-lg font-medium text-zinc-200">
+    <div className="mt-20 rounded-2xl border border-gray-200 bg-white px-6 py-10 text-center shadow-sm sm:px-10">
+      <p className="text-lg font-medium text-renthus-purple">
         Quer aplicar isso no seu negócio?
       </p>
-      <p className="mx-auto mt-2 max-w-lg text-sm text-zinc-400">
+      <p className="mx-auto mt-2 max-w-lg text-sm text-gray-600">
         Conte-nos seu cenário e montamos um plano sob medida — da prova de
         conceito à operação em produção.
       </p>

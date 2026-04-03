@@ -13,12 +13,12 @@ export default function AppsMobilePage() {
         description="Do protótipo à loja: construímos aplicativos nativos e híbridos com interface clara, animações conscientes e arquitetura preparada para crescer com o uso."
       />
 
-      <section className="mt-10 rounded-2xl border border-renthus-orange/20 bg-gradient-to-r from-renthus-purple-dark/50 via-[#1a0d28]/80 to-renthus-purple-dark/40 p-8 backdrop-blur-md sm:p-10">
-        <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-zinc-300 sm:text-lg">
+      <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-8 shadow-sm sm:p-10">
+        <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-gray-600 sm:text-lg">
           Unimos{" "}
-          <strong className="font-semibold text-zinc-100">design intuitivo</strong>{" "}
+          <strong className="font-semibold text-renthus-purple">design intuitivo</strong>{" "}
           e{" "}
-          <strong className="font-semibold text-zinc-100">
+          <strong className="font-semibold text-renthus-purple">
             engenharia de performance
           </strong>{" "}
           para que cada tela carregue rápido, guie o usuário sem fricção e suporte

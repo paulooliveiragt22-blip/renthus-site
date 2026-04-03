@@ -35,13 +35,13 @@ export default function ErpIntegradoPage() {
           return (
             <div
               key={p.title}
-              className="rounded-2xl border border-white/10 bg-gradient-to-br from-renthus-purple-light/[0.08] via-renthus-purple-dark/[0.45] to-[#07030c] p-6 backdrop-blur-md"
+              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
             >
               <Icon className="h-8 w-8 text-renthus-orange" />
-              <h2 className="mt-4 text-lg font-semibold text-zinc-100">
+              <h2 className="mt-4 text-lg font-semibold text-renthus-purple">
                 {p.title}
               </h2>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">
                 {p.text}
               </p>
             </div>

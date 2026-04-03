@@ -68,7 +68,7 @@ export default function PrivacidadePage() {
 
       <LegalH2>1. Quem somos</LegalH2>
       <LegalP>
-        A <strong className="font-medium text-zinc-200">{companyLegal.razaoSocial}</strong>, CNPJ {companyLegal.cnpj}, com sede na{" "}
+        A <strong className="font-medium text-gray-900">{companyLegal.razaoSocial}</strong>, CNPJ {companyLegal.cnpj}, com sede na{" "}
         {companyLegal.enderecoCompleto}, é a controladora dos dados pessoais
         tratados em nossas plataformas.
       </LegalP>
@@ -173,7 +173,7 @@ export default function PrivacidadePage() {
       <RightsGrid items={rights} />
       <LegalP>
         Para exercer qualquer direito, entre em contato pelo e-mail{" "}
-        <strong className="font-medium text-zinc-200">
+        <strong className="font-medium text-gray-900">
           {companyLegal.emailPrivacidade}
         </strong>
         . Responderemos em até 15 dias úteis.
@@ -205,7 +205,7 @@ export default function PrivacidadePage() {
       <LegalP>
         O encarregado pelo tratamento de dados pessoais na Renthus pode ser
         contactado pelo e-mail:{" "}
-        <strong className="font-medium text-zinc-200">
+        <strong className="font-medium text-gray-900">
           {companyLegal.emailPrivacidade}
         </strong>
       </LegalP>

@@ -49,7 +49,7 @@ export default function TermosPage() {
 
       <LegalH2>2. Sobre a Renthus</LegalH2>
       <LegalP>
-        A <strong className="font-medium text-zinc-200">{companyLegal.razaoSocial}</strong>, inscrita no CNPJ sob o nº{" "}
+        A <strong className="font-medium text-gray-900">{companyLegal.razaoSocial}</strong>, inscrita no CNPJ sob o nº{" "}
         {companyLegal.cnpj}, com sede na {companyLegal.enderecoCompleto}, é uma
         empresa de tecnologia que desenvolve e opera plataformas digitais para
         negócios locais brasileiros.
@@ -119,11 +119,11 @@ export default function TermosPage() {
         As políticas de cancelamento e reembolso variam conforme o produto
         contratado e são comunicadas no momento da contratação. Em caso de
         dúvidas, entre em contato pelo WhatsApp{" "}
-        <strong className="font-medium text-zinc-200">
+        <strong className="font-medium text-gray-900">
           {companyLegal.telefoneExibicao}
         </strong>{" "}
         ou pelo e-mail{" "}
-        <strong className="font-medium text-zinc-200">
+        <strong className="font-medium text-gray-900">
           {companyLegal.emailContato}
         </strong>
         .
@@ -166,7 +166,7 @@ export default function TermosPage() {
       <LegalP>
         Estes Termos são regidos pela legislação brasileira. Fica eleito o foro
         da{" "}
-        <strong className="font-medium text-zinc-200">
+        <strong className="font-medium text-gray-900">
           Comarca de Sorriso/MT
         </strong>{" "}
         para dirimir quaisquer controvérsias, com renúncia expressa a qualquer

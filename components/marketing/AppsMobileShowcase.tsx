@@ -34,20 +34,15 @@ export function AppsMobileShowcase() {
           <FadeIn key={p.title} delay={i * 0.08}>
             <article
               className={cn(
-                "group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10",
-                "bg-gradient-to-br from-renthus-purple-light/[0.12] via-renthus-purple-dark/[0.5] to-[#06030a] p-6 shadow-card backdrop-blur-md",
-                "transition-all duration-300 hover:border-renthus-orange/35 hover:shadow-[0_0_40px_-12px_rgba(255,107,0,0.25)]"
+                "group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm",
+                "transition-all duration-300 hover:border-gray-300 hover:shadow-renthus-card-hover"
               )}
             >
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-renthus-orange/10 blur-2xl transition-opacity group-hover:opacity-100"
-              />
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] icon-glow-orange">
+              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl border border-gray-100 bg-renthus-surface icon-glow-orange">
                 <Icon className="h-7 w-7 text-renthus-orange" />
               </div>
-              <h3 className="text-lg font-semibold text-zinc-50">{p.title}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">
+              <h3 className="text-lg font-semibold text-renthus-purple">{p.title}</h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-gray-600">
                 {p.description}
               </p>
             </article>

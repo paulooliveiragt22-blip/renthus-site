@@ -46,46 +46,46 @@ export default function ExclusaoDeDadosPage() {
   return (
     <InnerMain className="pb-28">
       <article className="mx-auto max-w-3xl">
-        <header className="mb-10 border-b border-white/10 pb-10">
+        <header className="mb-10 border-b border-gray-200 pb-10">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-renthus-orange">
             Seus dados
           </p>
-          <h1 className="text-balance text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+          <h1 className="text-balance text-3xl font-bold tracking-tight text-renthus-purple sm:text-4xl">
             Solicitação de Exclusão de Dados
           </h1>
-          <p className="mt-4 text-sm leading-relaxed text-zinc-500">
+          <p className="mt-4 text-sm leading-relaxed text-gray-500">
             Conforme exigido pela LGPD (Lei 13.709/2020) e pelos requisitos da
             plataforma Meta · {exclusaoDadosContent.empresaLegal} · CNPJ{" "}
             {exclusaoDadosContent.cnpj}
           </p>
         </header>
 
-        <p className="mb-10 text-base leading-relaxed text-zinc-400">
+        <p className="mb-10 text-base leading-relaxed text-gray-600">
           A Renthus respeita seu direito à privacidade e ao controle sobre seus
           dados pessoais. Se você deseja solicitar a exclusão dos seus dados da
           nossa plataforma, siga as instruções abaixo.
         </p>
 
-        <h2 className="mb-5 border-l-[3px] border-renthus-orange pl-3.5 font-semibold tracking-tight text-zinc-100">
+        <h2 className="mb-5 border-l-[3px] border-renthus-purple pl-3.5 font-semibold tracking-tight text-renthus-purple">
           Como solicitar a exclusão
         </h2>
         <div className="mb-12 flex flex-col gap-4">
           {steps.map((s) => (
             <div
               key={s.n}
-              className="flex gap-4 rounded-xl border border-white/10 bg-white/[0.02] p-5 sm:p-6"
+              className="flex gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6"
             >
               <div
                 className={cn(
-                  "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-renthus-orange/20",
+                  "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-renthus-orange/25",
                   "bg-renthus-orange/10 font-semibold text-sm text-renthus-orange"
                 )}
               >
                 {s.n}
               </div>
               <div>
-                <h3 className="font-semibold text-zinc-100">{s.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-zinc-400">
+                <h3 className="font-semibold text-renthus-purple">{s.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-gray-600">
                   {s.body}
                 </p>
               </div>
@@ -93,54 +93,54 @@ export default function ExclusaoDeDadosPage() {
           ))}
         </div>
 
-        <h2 className="mb-4 border-l-[3px] border-renthus-orange pl-3.5 font-semibold tracking-tight text-zinc-100">
+        <h2 className="mb-4 border-l-[3px] border-renthus-purple pl-3.5 font-semibold tracking-tight text-renthus-purple">
           O que será excluído
         </h2>
-        <ul className="mb-10 list-disc space-y-2 pl-5 text-sm text-zinc-400 marker:text-renthus-orange">
+        <ul className="mb-10 list-disc space-y-2 pl-5 text-sm text-gray-600 marker:text-renthus-orange">
           {excluidos.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
 
-        <h2 className="mb-4 border-l-[3px] border-renthus-orange pl-3.5 font-semibold tracking-tight text-zinc-100">
+        <h2 className="mb-4 border-l-[3px] border-renthus-purple pl-3.5 font-semibold tracking-tight text-renthus-purple">
           O que pode ser retido
         </h2>
-        <p className="mb-3 text-sm leading-relaxed text-zinc-400">
+        <p className="mb-3 text-sm leading-relaxed text-gray-600">
           Alguns dados podem ser retidos por obrigação legal, mesmo após a
           solicitação de exclusão:
         </p>
-        <ul className="mb-10 list-disc space-y-2 pl-5 text-sm text-zinc-400 marker:text-renthus-orange">
+        <ul className="mb-10 list-disc space-y-2 pl-5 text-sm text-gray-600 marker:text-renthus-orange">
           <li>
             Registros financeiros e fiscais — retidos por{" "}
-            <strong className="font-medium text-zinc-200">5 anos</strong>{" "}
+            <strong className="font-medium text-gray-900">5 anos</strong>{" "}
             conforme legislação tributária;
           </li>
           <li>
             Logs de acesso — retidos por{" "}
-            <strong className="font-medium text-zinc-200">6 meses</strong>{" "}
+            <strong className="font-medium text-gray-900">6 meses</strong>{" "}
             conforme Marco Civil da Internet;
           </li>
           <li>Dados necessários para defesa em processos judiciais em curso.</li>
         </ul>
 
-        <div className="mb-10 rounded-xl border border-renthus-orange/15 bg-renthus-orange/[0.04] p-5 sm:p-6">
-          <p className="text-sm leading-relaxed text-zinc-400">
+        <div className="mb-10 rounded-xl border border-renthus-orange/25 bg-renthus-orange/[0.06] p-5 sm:p-6">
+          <p className="text-sm leading-relaxed text-gray-600">
             A exclusão dos dados é{" "}
-            <strong className="font-medium text-zinc-200">irreversível</strong>.
+            <strong className="font-medium text-gray-900">irreversível</strong>.
             Após a confirmação, sua conta será encerrada e não será possível
             recuperar o histórico de pedidos ou avaliações.
           </p>
         </div>
 
-        <h2 className="mb-5 border-l-[3px] border-renthus-orange pl-3.5 font-semibold tracking-tight text-zinc-100">
+        <h2 className="mb-5 border-l-[3px] border-renthus-purple pl-3.5 font-semibold tracking-tight text-renthus-purple">
           Entre em contato
         </h2>
-        <div className="mb-12 flex flex-col gap-4 rounded-2xl border border-renthus-orange/20 bg-renthus-orange/[0.06] p-6 sm:p-8">
+        <div className="mb-12 flex flex-col gap-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
           <div>
-            <h3 className="font-semibold text-zinc-100">
+            <h3 className="font-semibold text-renthus-purple">
               Solicitar exclusão de dados
             </h3>
-            <p className="mt-1 text-sm text-zinc-500">
+            <p className="mt-1 text-sm text-gray-500">
               {exclusaoDadosContent.horarioAtendimento}
             </p>
           </div>
@@ -155,7 +155,7 @@ export default function ExclusaoDeDadosPage() {
               >
                 {exclusaoDadosContent.telefoneExibicao}
               </a>
-              <p className="text-xs text-zinc-500">WhatsApp — forma mais rápida</p>
+              <p className="text-xs text-gray-500">WhatsApp — forma mais rápida</p>
             </div>
           </div>
           <div className="flex flex-wrap items-start gap-3">
@@ -167,7 +167,7 @@ export default function ExclusaoDeDadosPage() {
               >
                 {exclusaoDadosContent.emailPrivacidade}
               </a>
-              <p className="text-xs text-zinc-500">
+              <p className="text-xs text-gray-500">
                 E-mail — {exclusaoDadosContent.emailPrazoResposta}
               </p>
             </div>
@@ -186,10 +186,10 @@ export default function ExclusaoDeDadosPage() {
           </a>
         </div>
 
-        <h2 className="mb-4 border-l-[3px] border-renthus-orange pl-3.5 font-semibold tracking-tight text-zinc-100">
+        <h2 className="mb-4 border-l-[3px] border-renthus-purple pl-3.5 font-semibold tracking-tight text-renthus-purple">
           Mais informações
         </h2>
-        <p className="mb-4 text-sm leading-relaxed text-zinc-400">
+        <p className="mb-4 text-sm leading-relaxed text-gray-600">
           Para entender como tratamos seus dados, consulte nossa{" "}
           <Link
             href="/privacidade"
@@ -199,14 +199,14 @@ export default function ExclusaoDeDadosPage() {
           </Link>{" "}
           completa ou entre em contato com nosso Encarregado de Dados (DPO)
           pelo e-mail{" "}
-          <strong className="font-medium text-zinc-200">
+          <strong className="font-medium text-gray-900">
             {exclusaoDadosContent.emailPrivacidade}
           </strong>
           .
         </p>
-        <p className="text-sm leading-relaxed text-zinc-400">
+        <p className="text-sm leading-relaxed text-gray-600">
           Você também pode registrar reclamações junto à{" "}
-          <strong className="font-medium text-zinc-200">
+          <strong className="font-medium text-gray-900">
             Autoridade Nacional de Proteção de Dados (ANPD)
           </strong>{" "}
           em{" "}
@@ -221,7 +221,7 @@ export default function ExclusaoDeDadosPage() {
           .
         </p>
 
-        <div className="mt-12 border-t border-white/10 pt-8 text-center text-xs text-zinc-500">
+        <div className="mt-12 border-t border-gray-200 pt-8 text-center text-xs text-gray-500">
           <p>
             © {new Date().getFullYear()} {exclusaoDadosContent.empresaLegal} ·
             CNPJ {exclusaoDadosContent.cnpj} ·{" "}

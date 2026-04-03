@@ -29,38 +29,38 @@ export function ChatWidget() {
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className={cn(
               "flex h-[min(420px,70vh)] w-[min(100vw-2rem,380px)] flex-col overflow-hidden rounded-2xl",
-              "border border-white/12 bg-[#12081c]/95 shadow-[0_24px_64px_-12px_rgba(0,0,0,0.75)] backdrop-blur-xl"
+              "border border-gray-200 bg-white shadow-lg"
             )}
           >
-            <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+            <div className="flex items-center justify-between border-b border-gray-100 px-4 py-3">
               <div className="flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-renthus-purple to-renthus-orange">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-renthus-purple">
                   <Sparkles className="h-4 w-4 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-zinc-100">Renthus IA</p>
-                  <p className="text-xs text-zinc-500">Simulação · preview</p>
+                  <p className="text-sm font-semibold text-gray-900">Renthus IA</p>
+                  <p className="text-xs text-gray-500">Simulação · preview</p>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="rounded-lg p-1.5 text-zinc-400 hover:bg-white/5 hover:text-zinc-200"
+                className="rounded-lg p-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                 aria-label="Fechar chat"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
 
-            <div className="flex flex-1 flex-col gap-3 overflow-y-auto p-4">
+            <div className="flex flex-1 flex-col gap-3 overflow-y-auto bg-renthus-surface p-4">
               {seed.map((m, i) => (
                 <div
                   key={i}
                   className={cn(
                     "max-w-[88%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
                     m.role === "assistant"
-                      ? "self-start border border-white/8 bg-renthus-purple-dark/60 text-zinc-200"
-                      : "self-end bg-gradient-to-br from-[#FF8C00]/90 to-[#FF4500] text-white"
+                      ? "self-start border border-gray-200 bg-white text-gray-700 shadow-sm"
+                      : "self-end bg-renthus-orange text-white shadow-sm"
                   )}
                 >
                   {m.text}
@@ -68,20 +68,20 @@ export function ChatWidget() {
               ))}
             </div>
 
-            <div className="border-t border-white/10 p-3">
+            <div className="border-t border-gray-100 bg-white p-3">
               <div className="flex gap-2">
                 <input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Digite uma mensagem…"
-                  className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/[0.05] px-3 py-2.5 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-renthus-orange/40 focus:outline-none focus:ring-1 focus:ring-renthus-orange/30"
+                  className="min-w-0 flex-1 rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-renthus-orange/50 focus:outline-none focus:ring-2 focus:ring-renthus-orange/20"
                   onKeyDown={(e) => {
                     if (e.key === "Enter") setInput("");
                   }}
                 />
                 <button
                   type="button"
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FF8C00] to-[#FF4500] text-white shadow-orange-glow transition hover:opacity-95"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-renthus-orange text-white shadow-sm transition hover:bg-renthus-orange-hover"
                   aria-label="Enviar"
                   onClick={() => setInput("")}
                 >
@@ -100,8 +100,8 @@ export function ChatWidget() {
         onClick={() => setOpen((v) => !v)}
         className={cn(
           "flex h-14 w-14 items-center justify-center rounded-full",
-          "bg-gradient-to-br from-[#FF8C00] to-[#FF4500] text-white shadow-orange-glow-lg",
-          "ring-4 ring-[#0f0716]/80"
+          "bg-renthus-orange text-white shadow-md ring-4 ring-white",
+          "transition hover:bg-renthus-orange-hover"
         )}
         aria-label={open ? "Fechar assistente" : "Abrir assistente"}
       >

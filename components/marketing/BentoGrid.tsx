@@ -47,10 +47,10 @@ export function BentoGrid() {
     >
       <FadeIn className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-renthus-purple sm:text-4xl">
             O que construímos para você
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-zinc-400">
+          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
             Produtos e serviços em grade modular — estilo Linear, foco em clareza
             e performance.
           </p>
@@ -67,19 +67,18 @@ export function BentoGrid() {
               >
                 <Card
                   className={cn(
-                    "group flex h-full flex-col bg-gradient-to-br from-renthus-purple-light/[0.11] via-renthus-purple-dark/[0.58] to-[#07030c] p-0 transition-colors",
-                    item.featured && "ring-1 ring-renthus-orange/15",
-                    "hover:border-renthus-orange/40"
+                    "group flex h-full flex-col p-0",
+                    item.featured && "ring-1 ring-renthus-orange/20"
                   )}
                 >
                   <Link
                     href={item.href}
-                    className="flex h-full min-h-0 flex-col rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-renthus-orange/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0716]"
+                    className="flex h-full min-h-0 flex-col rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-renthus-orange/50 focus-visible:ring-offset-2 focus-visible:ring-offset-renthus-surface"
                   >
                   <CardHeader className="flex flex-row items-start gap-4 pb-2">
                     <div
                       className={cn(
-                        "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]",
+                        "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-renthus-surface",
                         item.featured && "icon-glow-orange"
                       )}
                     >
@@ -88,7 +87,7 @@ export function BentoGrid() {
                           "h-6 w-6",
                           item.featured
                             ? "text-renthus-orange"
-                            : "text-renthus-purple-light"
+                            : "text-renthus-purple"
                         )}
                       />
                     </div>
@@ -97,10 +96,10 @@ export function BentoGrid() {
                     </div>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <CardDescription className="text-base group-hover:text-zinc-300">
+                    <CardDescription className="text-base group-hover:text-gray-700">
                       {item.description}
                     </CardDescription>
-                    <span className="mt-4 inline-block text-sm font-medium text-renthus-orange opacity-90 group-hover:underline">
+                    <span className="mt-4 inline-block text-sm font-semibold text-renthus-orange hover:underline">
                       Saiba mais →
                     </span>
                   </CardContent>
@@ -115,14 +114,14 @@ export function BentoGrid() {
       <FadeIn className="mx-auto mt-20 max-w-6xl" delay={0.12}>
         <div
           id="chat-ia"
-          className="scroll-mt-24 rounded-2xl border border-white/10 bg-renthus-purple-dark/40 p-8 backdrop-blur-md sm:p-12"
+          className="scroll-mt-24 rounded-2xl border border-gray-200 bg-white p-8 shadow-sm sm:p-12"
         >
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <h3 className="text-2xl font-bold text-zinc-100">
+              <h3 className="text-2xl font-bold text-renthus-purple">
                 Chat IA Renthus
               </h3>
-              <p className="mt-2 max-w-xl text-zinc-400">
+              <p className="mt-2 max-w-xl text-gray-600">
                 Experimente o assistente no canto da tela — é um preview da
                 experiência que seus clientes podem ter no dia a dia.
               </p>
@@ -134,8 +133,8 @@ export function BentoGrid() {
 
       <FadeIn className="mx-auto mt-16 max-w-3xl text-center" delay={0.08}>
         <div id="sobre" className="scroll-mt-24">
-          <h3 className="text-2xl font-bold text-zinc-100">Sobre a Renthus</h3>
-          <p className="mt-4 text-zinc-400 leading-relaxed">
+          <h3 className="text-2xl font-bold text-renthus-purple">Sobre a Renthus</h3>
+          <p className="mt-4 leading-relaxed text-gray-600">
             Somos uma empresa de tecnologia focada em produtos digitais de
             alto impacto: da primeira conversa com o cliente até a operação
             completa no ERP. Segurança, escalabilidade e design moderno guiam

@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 px-4 py-10 text-center text-sm text-zinc-500">
+    <footer className="border-t border-gray-200 bg-white px-4 py-10 text-center text-sm text-gray-500">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 sm:flex-row sm:justify-between sm:text-left">
-        <p>
+        <p className="text-gray-600">
           © {new Date().getFullYear()} Renthus Tecnologia. Todos os direitos
           reservados.
         </p>

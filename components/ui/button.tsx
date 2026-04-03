@@ -17,16 +17,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref as React.Ref<HTMLButtonElement>}
         className={cn(
           "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-renthus-orange/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0716]",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-renthus-orange/50 focus-visible:ring-offset-2 focus-visible:ring-offset-renthus-surface",
           "disabled:pointer-events-none disabled:opacity-50",
           {
             default:
-              "bg-renthus-purple-light/20 text-zinc-100 border border-white/10 hover:border-renthus-orange/40 hover:bg-renthus-purple-light/30",
+              "border border-gray-200 bg-white text-renthus-purple shadow-sm hover:border-renthus-orange/35 hover:bg-gray-50",
             outline:
-              "border border-white/15 bg-transparent text-zinc-100 hover:border-renthus-orange/50 hover:text-white",
-            ghost: "text-zinc-300 hover:bg-white/5 hover:text-white",
+              "border border-gray-300 bg-transparent text-gray-800 hover:border-renthus-orange hover:text-renthus-purple",
+            ghost:
+              "text-gray-600 hover:bg-gray-100 hover:text-renthus-purple",
             cta:
-              "bg-gradient-to-br from-[#FF8C00] to-[#FF4500] text-white shadow-orange-glow-soft hover:shadow-orange-glow-soft-lg hover:scale-[1.02] active:scale-[0.98]",
+              "bg-renthus-orange text-white shadow-sm hover:bg-renthus-orange-hover hover:shadow active:scale-[0.98]",
           }[variant],
           {
             sm: "h-9 px-3 text-sm",

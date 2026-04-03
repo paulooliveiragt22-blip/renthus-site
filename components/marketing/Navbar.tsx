@@ -34,7 +34,7 @@ function NavLink({
         "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
         active
           ? "text-renthus-orange"
-          : "text-zinc-300 hover:text-renthus-orange",
+          : "text-gray-600 hover:text-renthus-orange",
         className
       )}
     >
@@ -80,19 +80,17 @@ export function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "fixed top-0 z-50 w-full border-b border-white/[0.08]",
-        "bg-[#0f0716]/55 backdrop-blur-md supports-[backdrop-filter]:bg-[#0f0716]/40"
+        "fixed top-0 z-50 w-full border-b border-gray-200/90",
+        "bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/80"
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold tracking-tight text-zinc-100"
+          className="flex items-center gap-2 text-lg font-bold tracking-tight text-renthus-purple"
         >
-          <span className="bg-gradient-to-br from-renthus-purple-light to-renthus-orange bg-clip-text text-transparent">
-            Renthus
-          </span>
-          <span className="hidden font-medium text-zinc-400 sm:inline">
+          <span>Renthus</span>
+          <span className="hidden font-medium text-gray-500 sm:inline">
             Tecnologia
           </span>
         </Link>
@@ -112,7 +110,7 @@ export function Navbar() {
                 "flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 isSolutionActive || solutionsOpen
                   ? "text-renthus-orange"
-                  : "text-zinc-300 hover:text-renthus-orange"
+                  : "text-gray-600 hover:text-renthus-orange"
               )}
             >
               Soluções
@@ -130,26 +128,26 @@ export function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 6 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute left-0 top-full z-50 mt-1 min-w-[200px] rounded-xl border border-white/10 bg-[#12081c]/95 py-2 shadow-[0_16px_48px_-12px_rgba(0,0,0,0.65)] backdrop-blur-xl"
+                  className="absolute left-0 top-full z-50 mt-1 min-w-[200px] rounded-xl border border-gray-200 bg-white py-2 shadow-lg"
                 >
                   <Link
                     href="/solucoes"
                     onClick={closeDropdown}
-                    className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-white/5 hover:text-renthus-orange"
+                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-renthus-orange"
                   >
                     Visão geral
                   </Link>
-                  <div className="mx-2 border-t border-white/10" />
+                  <div className="mx-2 border-t border-gray-100" />
                   {solutionLinks.map((l) => (
                     <Link
                       key={l.href}
                       href={l.href}
                       onClick={closeDropdown}
                       className={cn(
-                        "block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-renthus-orange",
+                        "block px-4 py-2.5 text-sm hover:bg-gray-50 hover:text-renthus-orange",
                         pathname === l.href
                           ? "text-renthus-orange"
-                          : "text-zinc-300"
+                          : "text-gray-700"
                       )}
                     >
                       {l.label}
@@ -178,7 +176,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="rounded-lg p-2 text-zinc-300 md:hidden"
+          className="rounded-lg p-2 text-gray-600 md:hidden"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           onClick={() => setOpen((v) => !v)}
         >
@@ -193,21 +191,21 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-white/10 bg-[#0f0716]/95 backdrop-blur-lg md:hidden"
+            className="overflow-hidden border-t border-gray-200 bg-white shadow-sm md:hidden"
           >
             <nav className="flex flex-col gap-1 px-4 py-4">
               <NavLink
                 href="/"
                 onClick={() => setOpen(false)}
                 active={isHome}
-                className="py-3 text-zinc-200 hover:bg-white/5"
+                className="py-3 text-gray-800 hover:bg-gray-50"
               >
                 Home
               </NavLink>
               <button
                 type="button"
                 onClick={() => setMobileSolutionsOpen((v) => !v)}
-                className="flex w-full items-center justify-between rounded-lg px-3 py-3 text-left text-sm font-medium text-zinc-200 hover:bg-white/5 hover:text-renthus-orange"
+                className="flex w-full items-center justify-between rounded-lg px-3 py-3 text-left text-sm font-medium text-gray-800 hover:bg-gray-50 hover:text-renthus-orange"
               >
                 Soluções
                 <ChevronDown
@@ -218,7 +216,7 @@ export function Navbar() {
                 />
               </button>
               {mobileSolutionsOpen && (
-                <div className="ml-2 flex flex-col border-l border-white/10 pl-3">
+                <div className="ml-2 flex flex-col border-l border-gray-200 pl-3">
                   <Link
                     href="/solucoes"
                     onClick={() => setOpen(false)}
@@ -226,7 +224,7 @@ export function Navbar() {
                       "rounded-lg py-2 text-sm",
                       pathname === "/solucoes"
                         ? "text-renthus-orange"
-                        : "text-zinc-400 hover:text-renthus-orange"
+                        : "text-gray-600 hover:text-renthus-orange"
                     )}
                   >
                     Visão geral
@@ -240,7 +238,7 @@ export function Navbar() {
                         "rounded-lg py-2 text-sm",
                         pathname === l.href
                           ? "text-renthus-orange"
-                          : "text-zinc-400 hover:text-renthus-orange"
+                          : "text-gray-600 hover:text-renthus-orange"
                       )}
                     >
                       {l.label}
@@ -252,7 +250,7 @@ export function Navbar() {
                 href="/sobre"
                 onClick={() => setOpen(false)}
                 active={pathname === "/sobre"}
-                className="py-3 text-zinc-200 hover:bg-white/5"
+                className="py-3 text-gray-800 hover:bg-gray-50"
               >
                 Sobre
               </NavLink>
@@ -260,7 +258,7 @@ export function Navbar() {
                 href="/contato"
                 onClick={() => setOpen(false)}
                 active={pathname === "/contato"}
-                className="py-3 text-zinc-200 hover:bg-white/5"
+                className="py-3 text-gray-800 hover:bg-gray-50"
               >
                 Contato
               </NavLink>
