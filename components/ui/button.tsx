@@ -25,7 +25,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             outline:
               "border border-white/15 bg-transparent text-zinc-100 hover:border-renthus-orange/50 hover:text-white",
             ghost: "text-zinc-300 hover:bg-white/5 hover:text-white",
-            cta: "bg-gradient-to-br from-[#FF8C00] to-[#FF4500] text-white shadow-orange-glow hover:shadow-orange-glow-lg hover:scale-[1.02] active:scale-[0.98]",
+            cta:
+              "bg-gradient-to-br from-[#FF8C00] to-[#FF4500] text-white shadow-orange-glow-soft hover:shadow-orange-glow-soft-lg hover:scale-[1.02] active:scale-[0.98]",
           }[variant],
           {
             sm: "h-9 px-3 text-sm",

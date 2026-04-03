@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -49,10 +50,10 @@ export function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Button variant="cta" size="lg" asChild>
-            <a href="#chat-ia">Conheça a IA Renthus</a>
+            <Link href="/solucoes/ia-chatbot">Conheça a IA Renthus</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a href="#solucoes">Ver soluções</a>
+            <Link href="/solucoes">Ver soluções</Link>
           </Button>
         </motion.div>
       </div>

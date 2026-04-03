@@ -1,11 +1,7 @@
 "use client";
 
-import {
-  Bot,
-  BrainCircuit,
-  Globe,
-  LayoutDashboard,
-} from "lucide-react";
+import Link from "next/link";
+import { Bot, BrainCircuit, Database, Globe } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -18,35 +14,27 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    title: "Sites",
-    description:
-      "Presença digital rápida, responsiva e otimizada para conversão e SEO.",
-    icon: Globe,
-    className: "md:col-span-2 md:row-span-2 min-h-[240px]",
-    featured: true,
-  },
-  {
-    title: "Chatbots",
-    description:
-      "Atendimento 24/7 no WhatsApp e web, com fluxos inteligentes e handoff humano.",
-    icon: Bot,
-    className: "md:col-span-2 min-h-[180px]",
-    featured: true,
-  },
-  {
-    title: "ERP integrado",
-    description:
-      "Pedidos, estoque, financeiro e operação em um só lugar, conectado ao seu canal de vendas.",
-    icon: LayoutDashboard,
-    className: "md:col-span-2 min-h-[200px]",
-    featured: false,
-  },
-  {
-    title: "Soluções de IA",
-    description:
-      "Automação, análise de dados e copilots treinados no contexto do seu negócio.",
+    title: "Ecossistema de IA",
+    description: "Automação inteligente para seu negócio.",
     icon: BrainCircuit,
-    className: "md:col-span-4 min-h-[180px]",
+    href: "/solucoes/ia-chatbot",
+    className: "min-h-[220px]",
+    featured: true,
+  },
+  {
+    title: "ERP com Chatbot",
+    description: "Gestão completa integrada ao WhatsApp.",
+    icon: Database,
+    href: "/solucoes/erp-integrado",
+    className: "min-h-[220px]",
+    featured: true,
+  },
+  {
+    title: "Desenvolvimento High-End",
+    description: "Sites que vendem 24h por dia.",
+    icon: Globe,
+    href: "/contato",
+    className: "min-h-[220px]",
     featured: true,
   },
 ] as const;
@@ -68,7 +56,7 @@ export function BentoGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:gap-5">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
           {items.map((item, i) => {
             const Icon = item.icon;
             return (
@@ -79,10 +67,15 @@ export function BentoGrid() {
               >
                 <Card
                   className={cn(
-                    "flex h-full flex-col p-0",
-                    item.featured && "ring-1 ring-renthus-orange/15"
+                    "group flex h-full flex-col bg-gradient-to-br from-renthus-purple-light/[0.11] via-renthus-purple-dark/[0.58] to-[#07030c] p-0 transition-colors",
+                    item.featured && "ring-1 ring-renthus-orange/15",
+                    "hover:border-renthus-orange/40"
                   )}
                 >
+                  <Link
+                    href={item.href}
+                    className="flex h-full min-h-0 flex-col rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-renthus-orange/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0716]"
+                  >
                   <CardHeader className="flex flex-row items-start gap-4 pb-2">
                     <div
                       className={cn(
@@ -104,10 +97,14 @@ export function BentoGrid() {
                     </div>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <CardDescription className="text-base">
+                    <CardDescription className="text-base group-hover:text-zinc-300">
                       {item.description}
                     </CardDescription>
+                    <span className="mt-4 inline-block text-sm font-medium text-renthus-orange opacity-90 group-hover:underline">
+                      Saiba mais →
+                    </span>
                   </CardContent>
+                  </Link>
                 </Card>
               </FadeIn>
             );
@@ -144,6 +141,12 @@ export function BentoGrid() {
             completa no ERP. Segurança, escalabilidade e design moderno guiam
             cada entrega.
           </p>
+          <Link
+            href="/sobre"
+            className="mt-6 inline-block text-sm font-semibold text-renthus-orange hover:underline"
+          >
+            Conheça nossa história e stack →
+          </Link>
         </div>
       </FadeIn>
     </section>
