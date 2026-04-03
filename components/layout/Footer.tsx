@@ -21,6 +21,21 @@ export function Footer() {
           >
             Soluções
           </Link>
+          <Link
+            href="/exclusao-de-dados"
+            className="hover:text-renthus-orange transition-colors"
+          >
+            Exclusão de dados
+          </Link>
+          <Link href="/termos" className="hover:text-renthus-orange transition-colors">
+            Termos
+          </Link>
+          <Link
+            href="/privacidade"
+            className="hover:text-renthus-orange transition-colors"
+          >
+            Privacidade
+          </Link>
         </nav>
       </div>
     </footer>
